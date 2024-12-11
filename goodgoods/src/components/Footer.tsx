@@ -3,22 +3,34 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='bg-dark text-light'>
-      
-      <section className='row'>
+    <footer className='bg-dark text-light d-flex flex-column justify-content-center'>
+      <section className='d-flex flex-row justify-content-center'>
+
+        <div className="col-md-3 p-4">
+          <h5>About Us</h5>
+          <p>At goodGoods, we are passionate about providing high-quality products that meet your needs and exceed your expectations. Our mission is to make shopping easy, enjoyable, and rewarding for our customers.</p>
+        </div>
+
         <div className="col-md-3 p-4">
           <h5>Quick Links</h5>
-          <ul className='list-unstyled custom-list'>
+          <ul className='list-unstyled'>
             <li><a className='nav-link' href="/">Home</a></li>
             <li><a className='nav-link' href="/about-us">About Us</a></li>
             <li><a className='nav-link' href="/contact-us">Contact Us</a></li>
           </ul>
         </div>
+
+        <div className="col-md-3 p-4">
+          <h5>Contact Us</h5>
+          <ul className="list-unstyled">
+            <li><i className="fas fa-envelope"></i> support@goodgoods.com</li>
+            <li><i className="fas fa-phone"></i> +1 234 567 890</li>
+            <li><i className="fas fa-map-marker-alt"></i> 123 Good Street, Good City, GG 45678</li>
+          </ul>
+        </div>
       </section>
       <hr />
-      <div className="text-center py-1">
-        <p>&copy; 2024 goodGoods. All rights reserved.</p>
-      </div>
+      <p className="text-center py-1">&copy; 2024 goodGoods. All rights reserved.</p>
     </footer>
   )
 }

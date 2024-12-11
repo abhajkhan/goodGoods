@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 1rem;
+    padding: 1rem;
     transition: transform 0.2s;
     box-sizing: border-box;
 }
