@@ -1,0 +1,10 @@
+.checked {
+    color: #ffc107; 
+}
+
+.fa-star {
+    color: #e4e5e9; 
+    border: 1px solid #ccc;
+    padding: 2px;
+    border-radius: 50%;
+}
