@@ -4,14 +4,14 @@ import Carousel from "@/components/Carousel";
 import ListCategories from "@/components/ListCategories";
 
 export default async function Home() {
-  
+
   return (
     <>
       <div>
         <Carousel />
       </div>
       <div>
-        <ListCategories/>
+          <ListCategories />
       </div>
 
 

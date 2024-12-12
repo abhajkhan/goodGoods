@@ -4,7 +4,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer className='bg-dark text-light d-flex flex-column justify-content-center'>
-      <section className='d-flex flex-row justify-content-center'>
+      <section className='d-flex flex-row flex-wrap justify-content-center'>
 
         <div className="col-md-3 p-4">
           <h5>About Us</h5>
