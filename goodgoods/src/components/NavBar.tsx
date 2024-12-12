@@ -1,5 +1,6 @@
 'use client'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useCart } from '@/contexts/CartContext'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

@@ -1,14 +1,19 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import Carousel from "@/components/homeComponents/Carousel";
+import Carousel from "@/components/Carousel";
+import ListCategories from "@/components/ListCategories";
 
 export default async function Home() {
-
+  
   return (
     <>
-      <div> <h1 className="text-center">Welcome to goodGoods!</h1>
-        {/* <Carousel /> */}
+      <div>
+        <Carousel />
       </div>
+      <div>
+        <ListCategories/>
+      </div>
+
 
       <div className="vw-100 text-center">
         <Link href="/products" className="btn btn-outline-dark m-4 ">

@@ -26,11 +26,11 @@ export class ServicesProducts extends ServicesBase {
         return products
     }
 
-    // static async getProductsInCategory(category:string) {
-    //     const url = this.getUrl(`/products/category/${category}`);
+    static async getProductsInCategory(category:string) {
+        const url = this.getUrl(`/products/category/${category}`);
 
-    //     const Response = await fetch (url);
-    //     const products = await Response.json();
-    //     return products
-    // }
+        const Response = await fetch (url);
+        const products = await Response.json();
+        return products
+    }
 }
