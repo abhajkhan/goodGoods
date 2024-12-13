@@ -11,13 +11,13 @@ export default function AboutUs() {
                 <p>Learn more about goodGoods and our mission</p>
             </header>
 
-            <div className="">
+            <div>
                 <section className="about-section text-center">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
                             <h1>Welcome to goodGoods!</h1>
                             <p>At goodGoods, we are passionate about providing high-quality products that meet your needs and exceed your expectations. Our mission is to make shopping easy, enjoyable, and rewarding for our customers.</p>
-                            <p>We believe in the power of good products to bring joy and convenience to everyday life. Whether you're looking for the latest gadgets, stylish apparel, or essential household items, we have something for everyone.</p>
+                            <p>We believe in the power of good products to bring joy and convenience to everyday life. Whether you are looking for the latest gadgets, stylish apparel, or essential household items, we have something for everyone.</p>
                         </div>
                     </div>
                 </section>
@@ -43,10 +43,6 @@ export default function AboutUs() {
                     </div>
                 </section>
             </div>
-
-
-
-
         </div>
     )
 }

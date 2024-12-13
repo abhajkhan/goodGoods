@@ -6,6 +6,7 @@ import { ServicesProducts } from '@/services/services-products';
 import Link from 'next/link';
 import { capitalizeFirstLetter } from '@/services/utils';
 import Loading from './Loading';
+import Image from 'next/image';
 
 export default function ListCategories() {
 
@@ -20,7 +21,7 @@ export default function ListCategories() {
             const categoryNames = await ServicesCategories.getCategories();
             const categoryPromises = categoryNames.map(async (categoryName: string) => {
                 const categoryProducts = await ServicesProducts.getProductsInCategory(categoryName);
-                const categoryImages = categoryProducts.slice(0, 6).map((product: { image: any; }) => product.image);
+                const categoryImages = categoryProducts.slice(0, 6).map((product: { image: string; }) => product.image);
                 return { categoryName, categoryImages };
             });
             const categoryData = await Promise.all(categoryPromises);
@@ -40,11 +41,11 @@ export default function ListCategories() {
             {categories.map((category) => (
                 <Link href={`/categories/${category.categoryName}`} key={category.categoryName} className="nav-link p-2">
                     <div className="my-2 text-center">
-                        <img
+                        <Image
                             src={category.categoryImages[0]}
                             alt={category.categoryName}
-                            height='100rem'
-                            width='100rem'
+                            height='100'
+                            width='100'
                             style={{ objectFit: "contain" }}
                         />
                         <p className="fw-bold mt-2 text-center">{category.categoryName}</p>

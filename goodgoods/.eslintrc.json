@@ -1,3 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off" // Disable <img> rule
+    // "react-hooks/exhaustive-deps": "warn"  Change missing dependency error to a warning
+  }
 }
