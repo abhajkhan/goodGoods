@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <CartProvider>
           <OffcanvasExample />
-          <main className="mt-5">
+          <main className="mt-5 pt-5">
             {children}
             <Footer />
           </main>

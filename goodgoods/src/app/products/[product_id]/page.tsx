@@ -44,8 +44,8 @@ export default function ProductDetail({ params }: { params: Promise<Params> }) {
 
     return (
         <>
-            <div className="card m-4 d-flex flex-row">
-                <div className='col-5 '>
+            <div className="card m-4 d-flex flex-row col-9 justify-content-evenly">
+                <div className='col-5 p-4'>
                     <img src={product.image} alt={product.title} className="img-fluid" />
                 </div>
                 <div className="col-4 card-body">
