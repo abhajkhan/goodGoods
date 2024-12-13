@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import Script from 'next/script';
-import NavBar from "@/components/NavBar";
+import OffcanvasExample from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/contexts/CartContext";
 
@@ -39,12 +39,15 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <CartProvider>
-          <NavBar />
-          {children}
+          <OffcanvasExample />
+          <main className="mt-5 pt-5">
+            {children}
+            <Footer />
+          </main>
+
         </CartProvider>
-        <Footer />
-        <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" strategy="beforeInteractive" /> 
-        <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="beforeInteractive" /> 
+        <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" strategy="beforeInteractive" />
+        <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="beforeInteractive" />
         <Script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" strategy="beforeInteractive" />
       </body>
     </html>

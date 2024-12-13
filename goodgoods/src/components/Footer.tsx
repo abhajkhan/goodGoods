@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -14,9 +15,9 @@ export default function Footer() {
         <div className="col-md-3 p-4">
           <h5>Quick Links</h5>
           <ul className='list-unstyled'>
-            <li><a className='nav-link' href="/">Home</a></li>
-            <li><a className='nav-link' href="/about-us">About Us</a></li>
-            <li><a className='nav-link' href="/contact-us">Contact Us</a></li>
+            <li><Link className='nav-link' href="/">Home</Link></li>
+            <li><Link className='nav-link' href="/about-us">About Us</Link></li>
+            <li><Link className='nav-link' href="/contact-us">Contact Us</Link></li>
           </ul>
         </div>
 

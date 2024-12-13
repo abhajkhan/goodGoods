@@ -5,10 +5,9 @@ export default function ContactUs() {
     return (
 
         <div>
-
             <header className="bg-dark text-white text-center py-5">
                 <h1>Contact Us</h1>
-                <p>We'd love to hear from you! Reach out to us with any questions or feedback.</p>
+                <p>We had love to hear from you! Reach out to us with any questions or feedback.</p>
             </header>
 
             <div className="container">

@@ -3,11 +3,15 @@
 import styles from '@/css/ProductCard.module.css'
 import StarRating from './StarRating';
 import { useCart } from '@/contexts/CartContext';
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { Product } from '@/services/utils';
 
-export default function ProductCard(props: any) {
+interface ProductProps {
+  product: Product;
+}
+
+export default function ProductCard(props: ProductProps) {
   const product = props.product;
   const router = useRouter();
 

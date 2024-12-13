@@ -2,13 +2,18 @@
 
 import { useCart } from '@/contexts/CartContext';
 import { ServicesProducts } from '@/services/services-products';
+import { Product } from '@/services/utils';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
-export default function ProductDetail({ params }: { params: { product_id: number } }) {
-    const { product_id } = params;
+interface Params {
+    product_id: number;
+}
+
+export default function ProductDetail({ params }: { params: Promise<Params> }) {
+    const { product_id } = React.use(params);
     const { addToCart } = useCart();
-    const [product, setProduct] = useState<any | null>(null);
+    const [product, setProduct] = useState<Product | null>(null);
     const [loading, setLoading] = useState(true);
     const router = useRouter();
 
@@ -23,9 +28,11 @@ export default function ProductDetail({ params }: { params: { product_id: number
         }
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         fetchProduct();
     }, [product_id]);
+
 
     if (loading) return <div>Loading...</div>;
     if (!product) return <div>Product Not Found</div>
@@ -37,8 +44,8 @@ export default function ProductDetail({ params }: { params: { product_id: number
 
     return (
         <>
-            <div className="card m-4 d-flex flex-row">
-                <div className='col-5 '>
+            <div className="card m-4 d-flex flex-row col-9 justify-content-evenly">
+                <div className='col-5 p-4'>
                     <img src={product.image} alt={product.title} className="img-fluid" />
                 </div>
                 <div className="col-4 card-body">

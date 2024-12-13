@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from '@/css/StarRating.module.css'
+interface RatingProps {
+  rating:number;
+}
 
-
-export default function StarRating(props:any) {
+export default function StarRating(props:RatingProps) {
   const rating:number = Math.floor(props.rating);
 
   return (
