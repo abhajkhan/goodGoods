@@ -4,9 +4,9 @@ import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Script from 'next/script';
-import OffcanvasExample from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/contexts/CartContext";
+import NavBar from "@/components/NavBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,7 +39,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <CartProvider>
-          <OffcanvasExample />
+          <NavBar />
           <main className="mt-5 pt-5">
             {children}
             <Footer />
