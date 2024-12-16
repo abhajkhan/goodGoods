@@ -44,19 +44,23 @@ export default function ProductDetail({ params }: { params: Promise<Params> }) {
 
     return (
         <>
-            <div className="card m-4 d-flex flex-row col-9 justify-content-evenly">
-                <div className='col-5 p-4'>
+            <div className="card m-4 d-flex flex-md-row col-md-9 justify-content-evenly">
+                <div className='col-md-7 col-lg-5 p-4'>
                     <img src={product.image} alt={product.title} className="img-fluid" />
                 </div>
-                <div className="col-4 card-body">
-                    <h3 className="card-title">{product.title} </h3>
-                    <p>{product.description} </p>
+                <div className="col-md-4 card-body">
+                    <h3 className=" card-title">{product.title} </h3>
                     <span className="fs-5 fw-bold">${product.price}</span>
+                    <p className=''>{product.description} </p>
                     <div className="d-flex justify-content-between">
-                        <button className='btn btn-success m-1'>Buy Now</button>
-                        <button className="btn btn-dark m-1" onClick={handleAddToCart}><i className="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button className='d-none d-md-inline btn btn-success m-1'>Buy Now</button>
+                        <button className="d-none d-md-inline btn btn-dark m-1" onClick={handleAddToCart}><i className="fas fa-shopping-cart"></i> Add to Cart</button>
                     </div>
                 </div>
+            </div>
+            <div className="d-flex justify-content-evenly position-fixed bottom-0 bg-white w-100">
+                <button className='d-md-none btn btn-success m-1'>Buy Now</button>
+                <button className="d-md-none btn btn-dark m-1" onClick={handleAddToCart}><i className="fas fa-shopping-cart"></i> Add to Cart</button>
             </div>
         </>
     );
